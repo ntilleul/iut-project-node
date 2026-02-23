@@ -21,5 +21,13 @@ module.exports = {
                 }
             }
         ]);
-    }
+    },
+    securityDefinitions : {
+        jwt : {
+            type : 'apiKey',
+            name : 'Authorization',
+            in   : 'header'
+        }
+    },
+    security: [{ jwt: [] }]
 };
